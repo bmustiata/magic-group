@@ -22,7 +22,8 @@ public class NewFileLineDialog extends BaseGroupDialog {
 
 	@Override
 	protected void doAction() {
-		((File)treeItem).createChildLine( Integer.parseInt(nameEdit.getText()), 
+		((File)treeItem).createChildLine(
+				nameEdit.getText(), 
 				shortDescriptionEdit.getText(), 
 				descriptionEdit.getText() );
 	}

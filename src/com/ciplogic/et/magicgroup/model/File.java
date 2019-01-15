@@ -53,7 +53,7 @@ public class File extends TreeItem implements Serializable {
 		lineNumbers.remove(treeItem);
 	}
 
-	public void createChildLine(int lineNumber, String shortDescription, String description) {
+	public void createChildLine(String lineNumber, String shortDescription, String description) {
 		lineNumbers.add( new FileLocation(this, lineNumber, shortDescription, description) );
 	}
 

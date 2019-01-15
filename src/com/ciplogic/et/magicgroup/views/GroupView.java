@@ -55,7 +55,7 @@ public class GroupView extends ViewPart {
 		drillDownAdapter = new DrillDownAdapter(treeViewer);
 		treeViewer.setContentProvider( new ViewContentProvider(this) );
 		treeViewer.setLabelProvider(new ViewLabelProvider());
-		treeViewer.setComparator(new ViewerComparator(new GroupComparator()));
+		treeViewer.setComparator(new NameComparator());
 		treeViewer.setInput(getViewSite());
 		
 		// XXX: for crying out loud, who designed this API?
