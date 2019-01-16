@@ -18,7 +18,8 @@ public class Activator extends AbstractUIPlugin {
 	private static final String CET_MAGIC_GROUP_FILE = ".cetMagicGroup";
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "com.ciplogic.cet.MagicGroup";
+	// The PLUGIN_ID must be kept in sync with the setting in MANIFEST.MF
+	public static final String PLUGIN_ID = "com.germaniumhq.magicgroup";
 
 	// The shared instance
 	private static Activator plugin;
@@ -67,7 +68,8 @@ public class Activator extends AbstractUIPlugin {
 
 	/**
 	 * Returns an image descriptor for the image file at the given
-	 * plug-in relative path
+	 * plug-in relative path. The PLUGIN_ID must be kept in sync with
+	 * the setting in MANIFEST.MF.
 	 *
 	 * @param path the path
 	 * @return the image descriptor

@@ -1,5 +1,6 @@
 package com.ciplogic.et.magicgroup.views.actions;
 
+import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 
@@ -16,9 +17,11 @@ public class AddNewGroupAction extends BaseTreeAction {
 	public AddNewGroupAction(TreeViewer treeViewer) {
 		super(treeViewer);
 		
+		ImageDescriptor imageDescriptor = Activator.getImageDescriptor("icons/plus.png");
+
 		this.setText("Add new group");
 		this.setToolTipText("Add new group");
-		this.setImageDescriptor(Activator.getImageDescriptor("icons/plus.png"));
+		this.setImageDescriptor(imageDescriptor);
 	}
 	
 	public void run() {

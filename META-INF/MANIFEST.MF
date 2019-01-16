@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: MagicGroup
-Bundle-SymbolicName: MagicGroup;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: com.germaniumhq.magicgroup;singleton:=true
+Bundle-Version: 1.5.0
 Bundle-ClassPath: .,
  lib/miglayout-3.7-swt.jar,
  icons/*
@@ -26,3 +26,4 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.ui.workbench.texteditor
 Automatic-Module-Name: MagicGroup;singleton:=true
 Eclipse-LazyStart: true
+Bundle-Vendor: Germanium HQ e.U.
