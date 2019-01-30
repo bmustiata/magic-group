@@ -49,7 +49,7 @@ public class ViewLabelProvider extends StyledCellLabelProvider {
 		   imageKey = ISharedImages.IMG_OBJ_FOLDER;
 		   return PlatformUI.getWorkbench().getSharedImages().getImage(imageKey);
 		} else if (obj instanceof FileLocation) {
-		   imageKey = ISharedImages.IMG_ETOOL_DELETE;
+		   imageKey = org.eclipse.ui.ide.IDE.SharedImages.IMG_OPEN_MARKER;		   
 		   return PlatformUI.getWorkbench().getSharedImages().getImage(imageKey);
 		}
 		
