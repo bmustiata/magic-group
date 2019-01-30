@@ -23,6 +23,38 @@ public class ViewLabelProvider extends StyledCellLabelProvider {
 	@Override
 	public void update(ViewerCell cell) {
 		Object obj = cell.getElement();
+		StyledString styledString = null;
+		
+		if (obj instanceof FileLocation) {
+			styledString = createFileLocationLabel((FileLocation) obj);			
+		} else {
+			styledString = createStyledString(obj);			
+		}
+		
+		cell.setText(styledString.toString());
+		cell.setStyleRanges(styledString.getStyleRanges());
+		cell.setImage(getImage(obj));
+		
+		super.update(cell);
+	}
+
+
+	private StyledString createFileLocationLabel(FileLocation obj) {
+		StyledString styledString = new StyledString();
+
+		TreeItem file = (TreeItem) obj;
+		
+		if (file.getShortDescription() != null && !"".equals(file.getShortDescription().trim())) {
+			styledString.append(file.getShortDescription());
+			styledString.append(" - " + obj.toString(), StyledString.DECORATIONS_STYLER);
+		} else {
+			styledString.append(obj.toString());
+		}
+
+		return styledString;
+	}
+
+	private StyledString createStyledString(Object obj) {
 		StyledString styledString = new StyledString(obj.toString());
 
 		TreeItem file = (TreeItem) obj;
@@ -35,12 +67,7 @@ public class ViewLabelProvider extends StyledCellLabelProvider {
 		if (file.getShortDescription() != null && !"".equals(file.getShortDescription().trim())) {
 			styledString.append(" - " + file.getShortDescription(), StyledString.DECORATIONS_STYLER);
 		}
-		
-		cell.setText(styledString.toString());
-		cell.setStyleRanges(styledString.getStyleRanges());
-		cell.setImage(getImage(obj));
-		
-		super.update(cell);
+		return styledString;
 	}
 	
 	public Image getImage(Object obj) {
