@@ -1,24 +1,30 @@
 = Resource Analysis and Grouping for Eclipse
 
-A simple plugin that allows creating bookmarks and notes, based on the topic
-you want fixed. Simply add the plugin into your `eclipse/plugins` folder, then
-open the view using the Eclipse menu: `Window > Show View > Other`, and pick
-`RAGE` from the list.
+A simple eclipse plugin that allows creating bookmarks and notes, based on the
+topic you want fixed. Simply add the plugin into your `eclipse/plugins` folder,
+then open the view using the Eclipse menu: `Window > Show View > Other`, and
+pick `RAGE` from the list.
 
 image:doc/groupview.png[Screenshot]
 
-You can create groups, that are just logical structures for you, such as bug
+You can create _groups_, that are just logical structures for you, such as bug
 ids, functionality, etc. In these groups you can drag and drop file resources
-from the project explorer. In these references you can create bookmarks in the
-resource file using the toolbar icons (the plus minus things). The file
-location is either the line number, or some text that the line is containing.
+from the project explorer, so you will create _file references_ inside the
+_group_ where the file is dropped.
+
+In the _file references_ you can create bookmarks in the actual file using the
+toolbar icons (the plus minus things).
+
+The _file location_ is either the line number, or some text that the line is
+containing. Of course you can have multiple _file locations_ in a _file
+reference_.
 
 The same resource since it's just a bookmark can be present multiple times in
-RAGE, in different places.
+RAGE, in different groups.
 
 == Install
 
-Download from:
+Download from
 link:http://get.germaniumhq.com/rage/com.germaniumhq.magicgroup_1.5.0.jar[here],
 put in the `plugins` folder of your eclpse, restart eclipse, and select it from
 `Window > Show View > Other`.
