@@ -1,0 +1,16 @@
+- name: Publish the package.
+  become: true
+  hosts: ciplogic
+  gather_facts: False
+  tasks:
+    - name: Upload
+      synchronize:
+        src: dist/plugins/com.germaniumhq.magicgroup_1.5.0.jar
+        dest: /opt/www/germaniumhq_get/rage
+
+    - name: chown the site to nginx:nginx(100:101)
+      file:
+        dest: /opt/www/germaniumhq_get/rage
+        owner: 100
+        group: 101
+        recurse: true
