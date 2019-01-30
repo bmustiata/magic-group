@@ -24,6 +24,8 @@ public abstract class BaseGroupDialog extends Dialog {
 	protected Text  shortDescriptionEdit;
 	protected StyledText  descriptionEdit;
 	
+	protected Label nameLabel;
+	
 	protected BaseGroupDialog(Shell parentShell, TreeItem editedItem, boolean nameEditable) {
 		super(parentShell);
 		this.parent = parentShell;
@@ -44,8 +46,8 @@ public abstract class BaseGroupDialog extends Dialog {
 		Composite container = new Composite(parent, SWT.NONE);
 		container.setLayout(new MigLayout());
 		
-		Label label = new Label(container, SWT.NONE);
-		label.setText("Group name:");
+		nameLabel = new Label(container, SWT.NONE);
+		nameLabel.setText("Group name:");
 		
 		nameEdit = new Text(container, SWT.BORDER);
 		nameEdit.setText( getDefaultText() );
@@ -56,7 +58,7 @@ public abstract class BaseGroupDialog extends Dialog {
 			nameEdit.setEnabled(false);
 		}
 		
-		label = new Label(container, SWT.NONE);
+		Label label = new Label(container, SWT.NONE);
 		label.setText("Short description:");
 		
 		shortDescriptionEdit = new Text(container, SWT.BORDER);

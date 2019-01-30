@@ -1,10 +1,12 @@
 package com.ciplogic.et.magicgroup.views.dialogs;
 
 
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Shell;
 
 import com.ciplogic.et.magicgroup.model.File;
-import com.ciplogic.et.magicgroup.model.Group;
+import com.ciplogic.et.magicgroup.model.FileLocation;
 import com.ciplogic.et.magicgroup.model.TreeItem;
 
 public class EditTreeItemDescriptionDialog extends BaseGroupDialog {
@@ -13,6 +15,20 @@ public class EditTreeItemDescriptionDialog extends BaseGroupDialog {
 		super(shell, treeItem, !(treeItem instanceof File));
 	}
 
+	@Override
+	protected Control createDialogArea(Composite parent) {
+		Control result = super.createDialogArea(parent);
+		
+		if (this.treeItem instanceof FileLocation) {
+			this.nameLabel.setText("Location:");
+		} else if (this.treeItem instanceof File) {
+			this.nameLabel.setText("Resource:");
+		}
+		
+		return result;
+	}
+	
+	
 	@Override
 	protected void doAction() {
 		treeItem.setName(nameEdit.getText());
