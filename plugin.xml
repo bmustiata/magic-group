@@ -5,13 +5,13 @@
    <extension
          point="org.eclipse.ui.views">
       <category
-            name="Ciplogic Eclipse Tools"
-            id="MagicGroup">
+            name="GermaniumHQ Eclipse Tools"
+            id="RAGE">
       </category>
       <view
-            name="Group"
+            name="RAGE"
             icon="icons/cet.png"
-            category="MagicGroup"
+            category="RAGE"
             class="com.ciplogic.et.magicgroup.views.GroupView"
             id="com.ciplogic.et.magicgroup.views.GroupView">
       </view>

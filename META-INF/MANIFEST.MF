@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: MagicGroup
+Bundle-Name: RAGE
 Bundle-SymbolicName: com.germaniumhq.magicgroup;singleton:=true
 Bundle-Version: 1.5.0
 Bundle-ClassPath: .,
